@@ -1,0 +1,895 @@
+/* =========================================================
+   🤖 AI LABORATORY EXPERIMENT ASSISTANT
+   PREMIUM / ATTRACTIVE UI
+   ========================================================= */
+
+
+/* =========================================================
+   🌌 MAIN BACKGROUND
+   ========================================================= */
+
+.stApp {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(99, 102, 241, 0.20),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(168, 85, 247, 0.18),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(59, 130, 246, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef2ff,
+            #f5f3ff
+        );
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   🧹 HIDE STREAMLIT DEFAULT UI
+   ========================================================= */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+
+/* =========================================================
+   📐 MAIN CONTAINER
+   ========================================================= */
+
+.block-container {
+    max-width: 1250px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+
+/* =========================================================
+   🤖 MAIN AI TITLE
+   ========================================================= */
+
+.main-title {
+    text-align: center;
+
+    font-size: 46px;
+
+    font-weight: 900;
+
+    letter-spacing: -1.5px;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #6366f1,
+        #9333ea,
+        #c026d3
+    );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 5s ease infinite;
+
+    margin-top: 10px;
+
+    margin-bottom: 5px;
+
+    text-shadow:
+        0 5px 25px rgba(99, 102, 241, 0.15);
+}
+
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* =========================================================
+   ✨ SUBTITLE
+   ========================================================= */
+
+.subtitle {
+
+    text-align: center;
+
+    font-size: 17px;
+
+    color: #64748b;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   💫 AI STATUS BADGES
+   ========================================================= */
+
+.ai-badge {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #f5f3ff
+    );
+
+    color: #6d28d9;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    border: 1px solid #ddd6fe;
+
+    box-shadow:
+        0 5px 20px rgba(124, 58, 237, 0.15);
+
+    animation: pulseBadge 2.5s infinite;
+
+}
+
+
+.status-badge {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: #ecfdf5;
+
+    color: #047857;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    border: 1px solid #a7f3d0;
+
+    box-shadow:
+        0 5px 20px rgba(16, 185, 129, 0.12);
+
+}
+
+
+@keyframes pulseBadge {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(124, 58, 237, 0.25);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 10px rgba(124, 58, 237, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(124, 58, 237, 0);
+    }
+
+}
+
+
+/* =========================================================
+   🧊 GLASS CARDS
+   ========================================================= */
+
+.dashboard-card {
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    border-radius: 22px;
+
+    border:
+        1px solid rgba(255,255,255,0.8);
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.08);
+
+    transition:
+        all 0.35s ease;
+
+}
+
+
+.dashboard-card:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.01);
+
+    box-shadow:
+        0 20px 50px rgba(79, 70, 229, 0.18);
+
+}
+
+
+/* =========================================================
+   💎 CARD TITLE
+   ========================================================= */
+
+.card-title {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    color: #1e293b;
+
+    margin-bottom: 8px;
+
+}
+
+
+.card-description {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   🚀 QUICK ACTION BUTTONS
+   ========================================================= */
+
+.stButton > button {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    border-radius: 16px;
+
+    border:
+        1px solid rgba(99,102,241,0.18);
+
+    background:
+        rgba(255,255,255,0.90);
+
+    color: #1e293b;
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+    letter-spacing: 0.2px;
+
+    box-shadow:
+        0 7px 20px rgba(15,23,42,0.07);
+
+    transition:
+        all 0.25s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Shiny animation */
+
+.stButton > button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.7),
+            transparent
+        );
+
+    transition: left 0.5s ease;
+
+}
+
+
+.stButton > button:hover::before {
+
+    left: 130%;
+
+}
+
+
+.stButton > button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.02);
+
+    border-color:
+        #818cf8;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff
+        );
+
+    box-shadow:
+        0 12px 30px rgba(79,70,229,0.22);
+
+}
+
+
+.stButton > button:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+/* =========================================================
+   🌈 PRIMARY BUTTON
+   ========================================================= */
+
+button[kind="primary"] {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #6366f1,
+            #9333ea
+        ) !important;
+
+    background-size: 200% !important;
+
+    color: white !important;
+
+    border: none !important;
+
+    box-shadow:
+        0 10px 30px rgba(79,70,229,0.30) !important;
+
+    animation:
+        primaryGradient 4s ease infinite;
+
+}
+
+
+button[kind="primary"]:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.02);
+
+    box-shadow:
+        0 15px 40px rgba(124,58,237,0.38) !important;
+
+}
+
+
+@keyframes primaryGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* =========================================================
+   📚 FILE UPLOADER
+   ========================================================= */
+
+[data-testid="stFileUploader"] {
+
+    background:
+        rgba(255,255,255,0.75);
+
+    backdrop-filter:
+        blur(15px);
+
+    border:
+        2px dashed #a5b4fc;
+
+    border-radius:
+        20px;
+
+    padding:
+        18px;
+
+    box-shadow:
+        0 10px 30px rgba(79,70,229,0.08);
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+[data-testid="stFileUploader"]:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #6366f1;
+
+    box-shadow:
+        0 15px 35px rgba(79,70,229,0.15);
+
+}
+
+
+/* =========================================================
+   💬 CHAT AREA
+   ========================================================= */
+
+[data-testid="stChatMessage"] {
+
+    border-radius:
+        20px;
+
+    padding:
+        14px 18px;
+
+    margin-bottom:
+        14px;
+
+    background:
+        rgba(255,255,255,0.78);
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+        1px solid rgba(148,163,184,0.15);
+
+    box-shadow:
+        0 6px 20px rgba(15,23,42,0.06);
+
+    animation:
+        chatAppear 0.35s ease;
+
+}
+
+
+@keyframes chatAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   ✍️ CHAT INPUT
+   ========================================================= */
+
+[data-testid="stChatInput"] {
+
+    border-radius:
+        20px;
+
+}
+
+
+[data-testid="stChatInput"] textarea {
+
+    background:
+        rgba(255,255,255,0.95) !important;
+
+    border:
+        2px solid #c7d2fe !important;
+
+    border-radius:
+        18px !important;
+
+    font-size:
+        15px !important;
+
+    padding:
+        14px !important;
+
+    box-shadow:
+        0 8px 25px rgba(79,70,229,0.10) !important;
+
+    transition:
+        all 0.25s ease !important;
+
+}
+
+
+[data-testid="stChatInput"] textarea:focus {
+
+    border-color:
+        #6366f1 !important;
+
+    box-shadow:
+        0 0 0 4px rgba(99,102,241,0.12),
+        0 10px 30px rgba(79,70,229,0.15) !important;
+
+}
+
+
+/* =========================================================
+   📦 EXPERIMENT INFORMATION BOX
+   ========================================================= */
+
+.info-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(239,246,255,0.9),
+            rgba(238,242,255,0.9)
+        );
+
+    border-left:
+        5px solid #6366f1;
+
+    border-radius:
+        16px;
+
+    padding:
+        20px;
+
+    box-shadow:
+        0 8px 25px rgba(79,70,229,0.10);
+
+}
+
+
+/* =========================================================
+   🛡️ SAFETY BOX
+   ========================================================= */
+
+.safety-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ed,
+            #fef3c7
+        );
+
+    border-left:
+        5px solid #f59e0b;
+
+    border-radius:
+        16px;
+
+    padding:
+        20px;
+
+    box-shadow:
+        0 8px 25px rgba(245,158,11,0.12);
+
+}
+
+
+/* =========================================================
+   🎯 SECTION HEADERS
+   ========================================================= */
+
+.section-header {
+
+    font-size:
+        27px;
+
+    font-weight:
+        850;
+
+    color:
+        #1e293b;
+
+    margin-top:
+        30px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+/* =========================================================
+   ✨ DIVIDER
+   ========================================================= */
+
+.section-divider {
+
+    height:
+        2px;
+
+    border:
+        none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a5b4fc,
+            #c4b5fd,
+            transparent
+        );
+
+    margin:
+        35px 0;
+
+}
+
+
+/* =========================================================
+   🔵 EXPERIMENT NUMBER
+   ========================================================= */
+
+.experiment-number {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #9333ea
+        );
+
+    color:
+        white;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 8px 20px rgba(79,70,229,0.25);
+
+}
+
+
+/* =========================================================
+   📊 METRIC CARDS
+   ========================================================= */
+
+[data-testid="stMetric"] {
+
+    background:
+        rgba(255,255,255,0.75);
+
+    padding:
+        18px;
+
+    border-radius:
+        18px;
+
+    border:
+        1px solid rgba(148,163,184,0.15);
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,0.06);
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+[data-testid="stMetric"]:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(79,70,229,0.12);
+
+}
+
+
+/* =========================================================
+   🔽 SELECT BOX
+   ========================================================= */
+
+.stSelectbox > div > div {
+
+    border-radius:
+        14px !important;
+
+    border:
+        1px solid #c7d2fe !important;
+
+    background:
+        rgba(255,255,255,0.9) !important;
+
+}
+
+
+/* =========================================================
+   📝 TEXT INPUT
+   ========================================================= */
+
+.stTextInput input {
+
+    border-radius:
+        14px !important;
+
+    border:
+        1px solid #c7d2fe !important;
+
+    background:
+        rgba(255,255,255,0.9) !important;
+
+    padding:
+        12px !important;
+
+}
+
+
+.stTextInput input:focus {
+
+    border-color:
+        #6366f1 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(99,102,241,0.12) !important;
+
+}
+
+
+/* =========================================================
+   📢 ALERT BOXES
+   ========================================================= */
+
+.stAlert {
+
+    border-radius:
+        15px !important;
+
+    box-shadow:
+        0 5px 18px rgba(15,23,42,0.05);
+
+}
+
+
+/* =========================================================
+   ⏳ SPINNER
+   ========================================================= */
+
+.stSpinner {
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================================
+   📱 MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-title {
+
+        font-size:
+            30px;
+
+    }
+
+    .subtitle {
+
+        font-size:
+            15px;
+
+    }
+
+    .block-container {
+
+        padding-left:
+            1rem;
+
+        padding-right:
+            1rem;
+
+    }
+
+}
